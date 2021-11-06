@@ -1,6 +1,6 @@
 import styles from '../../styles/Main/Search.module.css';
 import { useState } from 'react';
-import apiService from '../../pages/api/ApiService';
+import apiService from '../../ApiService';
 
 function Search({ setPhotosToDisplay }) {
   const [state, setState] = useState('');
@@ -12,7 +12,9 @@ function Search({ setPhotosToDisplay }) {
 
   async function handleSubmit(e) {
     e.preventDefault();
+    console.log('Form submitted!!');
     const res = await apiService.search(state);
+    console.log(res.results);
     setPhotosToDisplay(res.results);
     setState('');
   }

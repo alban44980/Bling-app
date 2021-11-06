@@ -1,5 +1,5 @@
 const BASE_URL = 'https://api.unsplash.com/';
-const apiKey = process.env.MY_API_KEY;
+const apiKey = process.env.NEXT_PUBLIC_MY_API_KEY;
 
 const apiService = {};
 

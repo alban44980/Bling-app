@@ -5,7 +5,7 @@ import Main from '../components/Main';
 import Profile from '../components/Profile';
 
 //getting api key from .env
-const apiKey = process.env.MY_API_KEY;
+const apiKey = process.env.NEXT_PUBLIC_MY_API_KEY;
 
 export default function Home({ photos }) {
   const [photosToDisplay, setPhotosToDisplay] = useState(photos); //setting initial state with initial data fetching
