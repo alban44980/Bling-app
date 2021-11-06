@@ -1,4 +1,48 @@
 .container {
   flex: 1;
-  background-color: blueviolet;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  margin: 2vh 7vh 0 9vh;
+}
+
+.nav li {
+  display: flex;
+  align-items: center;
+}
+
+.navItem:hover {
+  background-color: var(--black);
+  color: var(--green);
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.navItem img {
+  width: 3vh;
+  margin: 1vh;
+}
+
+.navItem p {
+  font-size: 2vh;
+}
+
+.navItemLast {
+  margin-top: 10vh;
+}
+
+.navItemLast:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.navItemLast img {
+  width: 3vh;
+  margin: 1vh;
+}
+
+.navItemLast p {
+  font-size: 2vh;
 }
