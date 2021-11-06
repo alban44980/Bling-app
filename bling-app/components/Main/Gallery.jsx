@@ -1,26 +1,13 @@
 import styles from '../../styles/Main/Gallery.module.css';
+import PhotoItem from './PhotoItem';
 
 function Gallery({ photosToDisplay }) {
   return (
     <div className={styles.container}>
       {photosToDisplay
         ? photosToDisplay.map(
-            //looping over all pictures and render them
-            (photo) => (
-              <div key={photo.id} className={styles.item}>
-                <div className={styles.itemHeader}>
-                  <img src={photo.user.profile_image.small} alt="" />
-                  <p>{photo.user.name}</p>
-                </div>
-                <div className={styles.imageContainer}>
-                  <img
-                    className={styles.img}
-                    src={photo.urls.regular}
-                    alt={photo.description}
-                  />
-                </div>
-              </div>
-            )
+            //looping over all pictures and render a component for each of them
+            (photo) => <PhotoItem key={photo.id} photo={photo} />
           )
         : null}
     </div>

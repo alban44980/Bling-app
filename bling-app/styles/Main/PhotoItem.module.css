@@ -1,0 +1,35 @@
+.item {
+  margin: 2.5vh 1vh;
+  width: 47%;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.itemHeader {
+  width: 100%;
+  height: 10%;
+  margin-bottom: 1vh;
+  display: flex;
+  align-items: center;
+}
+
+.itemHeader img {
+  border-radius: 20px;
+}
+
+.itemHeader p {
+  margin-left: 1.5vh;
+}
+
+.imageContainer {
+  width: 100%;
+  height: 90%;
+}
+
+.img {
+  height: 100%;
+  width: 100%;
+}
