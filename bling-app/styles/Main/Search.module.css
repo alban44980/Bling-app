@@ -1,0 +1,6 @@
+.container {
+  height: 15%;
+  display: flex;
+  align-items: center;
+  background-color: aquamarine;
+}
