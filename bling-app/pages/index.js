@@ -10,8 +10,6 @@ const apiKey = process.env.MY_API_KEY;
 export default function Home({ photos }) {
   const [photosToDisplay, setPhotosToDisplay] = useState(photos); //setting initial state with initial data fetching
 
-  console.log(photos);
-
   return (
     <div className={styles.container}>
       <Head>

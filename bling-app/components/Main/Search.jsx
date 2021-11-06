@@ -1,9 +1,20 @@
 import styles from '../../styles/Main/Search.module.css';
+import { useState } from 'react';
+import apiService from '../../pages/api/ApiService';
 
-function Search() {
-  function handleSubmit(e) {
+function Search({ setPhotosToDisplay }) {
+  const [state, setState] = useState('');
+
+  function handleChange(e) {
+    const { value } = e.target;
+    setState(value);
+  }
+
+  async function handleSubmit(e) {
     e.preventDefault();
-    console.log('FORM SUBMITTED YIII');
+    const res = await apiService.search(state);
+    setPhotosToDisplay(res.results);
+    setState('');
   }
   return (
     <div className={styles.container}>
@@ -13,6 +24,9 @@ function Search() {
           id="searchInput"
           type="text"
           placeholder="Search an image: mountains, ocean, or anything else !"
+          name="image-search"
+          value={state}
+          onChange={handleChange}
         />
         <button>Search</button>
       </form>
