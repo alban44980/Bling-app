@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import { useState } from 'react';
 import styles from '../styles/Home.module.css';
 import Main from '../components/Main';
 import Profile from '../components/Profile';
@@ -7,7 +8,10 @@ import Profile from '../components/Profile';
 const apiKey = process.env.MY_API_KEY;
 
 export default function Home({ photos }) {
+  const [photosToDisplay, setPhotosToDisplay] = useState(photos); //setting initial state with initial data fetching
+
   console.log(photos);
+
   return (
     <div className={styles.container}>
       <Head>
@@ -24,6 +28,7 @@ export default function Home({ photos }) {
   );
 }
 
+//Fetching the data ahead of user's request
 export const getStaticProps = async () => {
   const res = await fetch(
     'https://api.unsplash.com/photos/random?count=20&orientation=landscape',
