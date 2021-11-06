@@ -1,0 +1,31 @@
+.container {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container h1 {
+  margin: 2vh;
+  font-weight: bold;
+  font-size: 5vh;
+}
+
+.container button {
+  margin: 2vh;
+  width: 50%;
+  height: 30%;
+  font-weight: bold;
+  background-color: var(--black);
+  color: var(--pink);
+  border-radius: 10px;
+  font-size: 4vh;
+  transition: transform 0.2s;
+}
+
+.container button:hover {
+  color: var(--green);
+  cursor: pointer;
+  transform: scale(1.1);
+}
