@@ -4,3 +4,9 @@
   display: flex;
   background-color: var(--pink);
 }
+
+@media only screen and (max-width: 870px) {
+  .main {
+    flex-direction: column;
+  }
+}
