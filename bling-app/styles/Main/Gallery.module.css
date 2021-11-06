@@ -1,0 +1,9 @@
+.container {
+  height: 60%;
+  margin: 3vh;
+  max-height: 450px;
+  overflow-y: scroll;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}

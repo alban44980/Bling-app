@@ -2,5 +2,48 @@
   height: 15%;
   display: flex;
   align-items: center;
-  background-color: aquamarine;
+}
+
+.profilePic {
+  margin-left: auto;
+  margin-right: 3vw;
+  border-radius: 50%;
+  height: 7vh;
+}
+
+.container form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 90%;
+}
+
+.form input {
+  margin: 5vh;
+  width: 40%;
+  height: 40%;
+  border-radius: 20px;
+  border: 1px solid black;
+  padding: 1vh;
+}
+
+.form button {
+  height: 40%;
+  border-radius: 20px;
+  padding: 1.5vh;
+  background-color: var(--black);
+  color: var(--green);
+  font-weight: 700;
+  font-size: 2vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+}
+
+.form button:hover {
+  cursor: pointer;
+  color: var(--black);
+  background-color: var(--green);
 }
