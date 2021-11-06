@@ -22,7 +22,10 @@ export default function Home({ photos }) {
 
       <main className={styles.main}>
         <Profile />
-        <Main />
+        <Main
+          photosToDisplay={photosToDisplay}
+          setPhotosToDisplay={setPhotosToDisplay}
+        />
       </main>
     </div>
   );

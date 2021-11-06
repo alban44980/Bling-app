@@ -3,11 +3,11 @@ import Search from './Main/Search';
 import Gallery from './Main/Gallery';
 import Bottom from './Main/Bottom';
 
-function Main() {
+function Main({ photosToDisplay }) {
   return (
     <div className={styles.container}>
       <Search />
-      <Gallery />
+      <Gallery photosToDisplay={photosToDisplay} />
       <Bottom />
     </div>
   );
