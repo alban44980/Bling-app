@@ -3,7 +3,11 @@ import styles from '../styles/Home.module.css';
 import Main from '../components/Main';
 import Profile from '../components/Profile';
 
-export default function Home() {
+//getting api key from .env
+const apiKey = process.env.MY_API_KEY;
+
+export default function Home({ photos }) {
+  console.log(photos);
   return (
     <div className={styles.container}>
       <Head>
@@ -19,3 +23,21 @@ export default function Home() {
     </div>
   );
 }
+
+export const getStaticProps = async () => {
+  const res = await fetch(
+    'https://api.unsplash.com/photos/random?count=20&orientation=landscape',
+    {
+      method: 'GET',
+      headers: {
+        Authorization: `Client-ID ${apiKey}`,
+      },
+    }
+  );
+  const photos = await res.json();
+  return {
+    props: {
+      photos,
+    },
+  };
+};
