@@ -1,8 +1,10 @@
+import apiService from '../../ApiService';
 import styles from '../../styles/Main/Bottom.module.css';
 
-function Bottom() {
-  function handleClick() {
-    console.log('button clicked yiiii');
+function Bottom({ setPhotosToDisplay }) {
+  async function handleClick() {
+    const newPics = await apiService.getNewPictures();
+    setPhotosToDisplay(newPics);
   }
 
   return (
