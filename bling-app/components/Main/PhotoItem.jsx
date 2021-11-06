@@ -2,9 +2,12 @@ import styles from '../../styles/Main/PhotoItem.module.css';
 
 function PhotoItem({ photo }) {
   return (
-    <div key={photo.id} className={styles.item}>
+    <div className={styles.item}>
       <div className={styles.itemHeader}>
-        <img src={photo.user.profile_image.small} alt="" />
+        <img
+          src={photo.user.profile_image.small}
+          alt="Photograph profile picture"
+        />
         <p>{photo.user.name}</p>
       </div>
       <div className={styles.imageContainer}>

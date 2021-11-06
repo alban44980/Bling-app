@@ -1,16 +1,19 @@
 .container {
   flex: 1;
+  width: 100%;
 }
 
 .nav {
   display: flex;
   flex-direction: column;
   margin: 2vh 7vh 0 9vh;
+  width: 65%;
 }
 
 .nav li {
   display: flex;
   align-items: center;
+  width: 100%;
 }
 
 .navItem:hover {
@@ -21,8 +24,9 @@
 }
 
 .navItem img {
-  width: 3vh;
+  width: 8%;
   margin: 1vh;
+  height: 100%;
 }
 
 .navItem p {
@@ -45,4 +49,11 @@
 
 .navItemLast p {
   font-size: 2vh;
+}
+
+/* media query */
+@media only screen and (max-width: 870px) {
+  .nav {
+    align-items: center;
+  }
 }
