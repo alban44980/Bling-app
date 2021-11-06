@@ -17,6 +17,7 @@ a {
   padding: 0;
 }
 
+/* setting variables for colors */
 :root {
   --pink: rgb(255, 231, 231);
   --black: rgb(17, 17, 17);

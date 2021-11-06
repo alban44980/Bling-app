@@ -3,8 +3,8 @@ import styles from '../../styles/Main/Bottom.module.css';
 
 function Bottom({ setPhotosToDisplay }) {
   async function handleClick() {
-    const newPics = await apiService.getNewPictures();
-    setPhotosToDisplay(newPics);
+    const newPics = await apiService.getNewPictures(); //making the call to get new random pictures
+    setPhotosToDisplay(newPics); //setting the state with the data response
   }
 
   return (
