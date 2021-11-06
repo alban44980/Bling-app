@@ -6,8 +6,9 @@
 .nav {
   display: flex;
   flex-direction: column;
-  margin: 2vh 7vh 0 9vh;
+  justify-content: center;
   width: 65%;
+  margin: 2vh auto;
 }
 
 .nav li {
@@ -49,11 +50,4 @@
 
 .navItemLast p {
   font-size: 2vh;
-}
-
-/* media query */
-@media only screen and (max-width: 870px) {
-  .nav {
-    align-items: center;
-  }
 }
