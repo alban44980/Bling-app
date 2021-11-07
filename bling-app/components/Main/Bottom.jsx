@@ -9,7 +9,7 @@ function Bottom({ setPhotosToDisplay }) {
 
   return (
     <div className={styles.container}>
-      <h1>Not liking those ?</h1>
+      <h1>Not liking these ?</h1>
       <button onClick={handleClick}>Click me to load new pics !</button>
     </div>
   );
