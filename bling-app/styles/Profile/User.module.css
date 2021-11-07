@@ -63,3 +63,12 @@
   font-size: 1.8vh;
   font-weight: lighter;
 }
+
+@media only screen and (max-width: 870px) {
+  .userContainer {
+    margin: 3vh 0;
+  }
+  .userData {
+    padding-bottom: 2vh;
+  }
+}
