@@ -2,6 +2,7 @@
   height: 15%;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .profilePic {
@@ -30,6 +31,7 @@
 
 .form button {
   height: 40%;
+  width: 12%;
   border-radius: 20px;
   padding: 1.5vh;
   background-color: var(--black);
@@ -46,4 +48,16 @@
   cursor: pointer;
   color: var(--black);
   background-color: var(--green);
+}
+
+@media only screen and (max-width: 870px) {
+  .profilePic {
+    display: none;
+  }
+  .container form {
+    width: 100%;
+  }
+  .container {
+    height: 150px;
+  }
 }
